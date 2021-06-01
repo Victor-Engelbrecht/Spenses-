@@ -1,4 +1,4 @@
-package spending;
+package expense;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.micronaut.core.annotation.Introspected;
@@ -15,6 +15,7 @@ public class CurrencyConversion{
 
     }
     public float getUsValue(){
+        System.out.print ("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+usValue+"");
         return usValue;
     }
     public void setUsValue(float newUs){
@@ -22,7 +23,7 @@ public class CurrencyConversion{
     }
 
     public float getZaValue(){
-        return usValue;
+        return zaValue;
     }
     public void setZaValue(float newZa){
         this.zaValue = newZa;

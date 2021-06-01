@@ -16,5 +16,9 @@
             <g:textField name="balance" value="" /> <br/><br/>
             <g:actionSubmit value="Add user" action="addUser"/>
         </g:form>
+        <div class="weatherBlock">
+            <h2><b>${currencyConversion.usValue}</b></h2>
+            <h3><b>${currencyConversion.zaValue}</b></h3>
+        </div>
     </body>
 </html>

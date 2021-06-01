@@ -136,5 +136,5 @@ environments:
                 jdbcInterceptors: ConnectionState
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
 
-CurrencyConvertion:
+CurrencyConversion:
     apikey: 5e8eab0a3b05fc1ec0dd638fcef128d1

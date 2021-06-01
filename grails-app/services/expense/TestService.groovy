@@ -37,18 +37,23 @@ class TestService implements GrailsConfigurationAware{
         this.client = HttpClient.create(url.toURL()).toBlocking()
    }
 
-   /*CurrencyConversion currencyConversion(Float aFloat) {
+   CurrencyConversion currencyConversion(Float aFloat) {
 
+       getData()
+       //def testingGetter = test.usValue
+       //println " ********************************************************* = $test.usValue"
+       //println " ********************************************************* = $CurrencyConversion.usValue"
        //add your code here
 
-       def currencyConversion = new CurrencyConvertion()
-       currencyConversion.usValue = 1.23f
+       def currencyConversion = new CurrencyConversion()
+       //currencyConversion.usValue = 1.23f
        currencyConversion.zaValue = 2.34f
 
        currencyConversion
-   }*/
+       println "###########################################$currencyConversion.usValue"
+   }
 
-   /*CurrencyConversion getData() {
+   CurrencyConversion getData() {
         try {
             HttpRequest request = HttpRequest.GET(currencyConversionUri())
             return client.retrieve(request, CurrencyConversion)
@@ -56,11 +61,11 @@ class TestService implements GrailsConfigurationAware{
         } catch (HttpClientResponseException e) {
             return null
         }
-   }*/
+   }
 
    URI currencyConversionUri() {
        UriBuilder uriBuilder = UriBuilder.of('/api/latest')
-               .queryParam('q')
+               //.queryParam('q')
                .queryParam('access_key', apikey)
        uriBuilder.build()
    }

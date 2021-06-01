@@ -9,6 +9,7 @@ class UserController {
     def userService
     def testService
     def currencyConversion
+
     def addUser(String name , Float balance){
         userService.addUser(name, balance)
         render (view:"home", model:[user: userService])
@@ -21,12 +22,8 @@ class UserController {
 
     def convert(Float test) {
         currencyConversion = testService.currencyConversion(test)
+        //currencyConversion = testService.getData()
         render(view: "home", model: [currencyConversion: currencyConversion])
     }
 }
 
-class TransactionController {
-
-    static scaffold = Transaction
-
-}
